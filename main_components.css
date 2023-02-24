@@ -1,0 +1,21 @@
+.container{
+    width: 100%;
+    padding: 2px;
+    
+}
+.row{
+    display: grid;
+}
+.col-3{
+
+}
+.col-4{
+
+}
+.col-5{
+
+}
+.w-40{
+    width: 40%;
+    border: 1px solid black;
+}

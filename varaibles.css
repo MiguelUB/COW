@@ -1,0 +1,22 @@
+:root {
+    --color-primary-1: #1e90ff;
+    --color-primary-2: #ffffff;
+    --color-primary-3:#fffff;
+    --color-secondary-1:red;
+    --color-secondary-2:red;
+    --color-secondary-3:red;
+    --color-contrast-1:red;
+    --color-contrast-2:red;
+    --color-contrast-3:red;
+    --white:white;
+    --black:black;
+
+    --main-font-family:Times Roman;
+    --secondary-font-family: Roca;
+
+    --title-content:24px;
+    --body-content:14px;
+    --mini-content:8px;
+    --subtitle-content:18px;
+
+  }
