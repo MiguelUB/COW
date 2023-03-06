@@ -1,0 +1,125 @@
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+.d-flex{
+    display: flex;
+}
+.flex-dir-col{
+    flex-direction: column;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.col-gap-10{
+    column-gap: 10px;
+}
+.row-gap-10{
+    row-gap: 10px;
+}
+.m-top-10{
+    margin-top: 10px;
+}
+.m-bottom-10{
+    margin-bottom: 10px;
+}
+.main-row{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+.main-col{
+width: 100%;
+min-height: 40rem;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.color-primary-1{
+    color: var(--color-primary-1) !important;
+}
+
+.bg-primary-1{
+    background-color: white;
+}
+.bg-secondary-1{
+    background-color: var(--color-secondary-1);
+}
+.bg-contrast-1{
+    background-color: var(--color-contrast-1);
+}
+.bg-contrast-2{
+    background-color: var(--color-contrast-2);
+}
+
+.text-content{
+    color: var(--white);
+    font-family: var(--main-font-family);
+    font-weight: 300;
+    font-size: var(--size-400);
+    transition: 0.5s;
+}
+.text-content a{
+    color: var(--white);
+    font-family: var(--main-font-family);
+    font-weight: 300;
+    font-size: var(--size-500);
+    text-decoration: none;    
+    transition: 1s;
+}
+.text-content a:hoer{
+    color: var(--white);
+    font-family: var(--main-font-family);
+    font-weight: 500;
+    font-size: var(--size-500);
+    text-decoration: underline;
+}
+
+.text-title-1{
+    color: var(--white);
+    font-family: var(--main-font-family);
+    font-weight: 400;
+    font-size: var(--size-600);
+}
+.text-title-2{
+    color: var(--white);
+    font-family: var(--main-font-family);
+    font-weight: 400;
+    font-size: var(--size-500);
+
+}
+
+
+
+.btn-primary{
+    background-color: var(--color-secondary-3);
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: var(--color-secondary-2);
+}
+.border-form{
+    border: 2px solid white;
+    width: 80%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .left-col, .right-col{
+        display: none;
+    }
+    .main-row{
+        grid-template-columns:auto;
+    }
+}
