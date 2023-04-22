@@ -55,6 +55,7 @@ else{
     <script src="bootstrap/js/jquery-3.6.3.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/varaibles.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_components.css" />
     <link rel="icon" href="img/icon.png" />
     <title>Sweet Deals</title>
   </head>
