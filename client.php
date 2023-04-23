@@ -82,7 +82,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
         $city = $hotel["ciudad"];
         $country = $hotel["pais"];
         $id = $hotel["id"];
-        $desccription = $hotel["description"] ?: 'Este destino no tiene descripcion';
+        //$desccription = $hotel["description"] ?: 'Este destino no tiene descripcion';
         $pool = $hotel["piscina"] ? "piscina.png" : "piscina_no.png";
         echo "
       <div class='card m-2 px-0 reserva' style='width: 21rem;' data-name='$nombre'>
@@ -90,7 +90,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
         <div class='card-body'>
           <h5 class='card-title'>$nombre</h5>
           <span class='badge bg-secondary mb-1'>$country - $city</span> <img src='./img/$pool' style='height:20px;'>
-          <p class='card-text description-places'>$desccription</p>
+          <p class='card-text description-places'>desccription</p>
           <button id='reserva-$id' class='btn  main-button'>Reservar</button>
         </div>
     </div>";
@@ -174,7 +174,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
         <!-- Hotel input -->
         <div class="form-outline mb-4">
           <label class="form-label" for="form6Example5">Hotel name</label>
-          <select " id=" hotelform" name="hotelform" class="form-control" required>
+          <select " id="hotelform" name="hotelform" class="form-control" required>
             <?php
             $hotelList = $DBHotels->query("SELECT * FROM hoteles");
             foreach ($hotelList as $hotel) {

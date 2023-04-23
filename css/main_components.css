@@ -158,6 +158,9 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 1
 .reserva{
     transition:0.3s;
 }
+.reserva:hover{
+    background-color: #e3dfdfd9; 
+}
 .icon-search{
 
     color:white;
