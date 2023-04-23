@@ -6,6 +6,7 @@ let reservasGrid = $('reservas-turisticas')
 let searchBarNoResult = $('searchBarNoResult')
 let formulario =$$('form')
 let formularioHotelSelector = $$('form select')[0]
+let searchSuggestions= $('searchSuggestions')
 
 console.log(formularioHotelSelector)
 
@@ -39,8 +40,14 @@ function displayInputResults(textInput) {
         searchBarNoResult.appear()
     }
 }
+function showSuggestion(textInput){
+    console.log('FFFF',textInput)
+    searchSuggestions.innerHTML=textInput
+    return
+}
 
 
 searchBar.addEventListener("input", function (e) {
     displayInputResults(this.value);
+    showSuggestion(this.value);
 });

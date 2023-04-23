@@ -58,7 +58,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
   </div>
   <main class="container-fluid">
     <!--SEARCHBAR-->
-    <div class='d-flex w-100 justify-content-center my-3'>
+    <div class='d-flex w-100 justify-content-center align-items-center my-3 flex-column'>
       <div class="input-group rounded w-50 ">
         <input id='searchInput' type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
           aria-describedby="search-addon" />
@@ -67,6 +67,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
             </ima>
         </span>
       </div>
+      <div id='searchSuggestions'class='w-50 border py-1 px-2'></div>
     </div>
 
     <!--GRID PLACES-->
