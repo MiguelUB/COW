@@ -67,7 +67,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
             </ima>
         </span>
       </div>
-      <div id='searchSuggestions'class='w-50 border py-1 px-2'></div>
+      <div id='searchSuggestions' class='w-50 border py-1 px-2'></div>
     </div>
 
     <!--GRID PLACES-->
@@ -82,7 +82,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
         $city = $hotel["ciudad"];
         $country = $hotel["pais"];
         $id = $hotel["id"];
-        //$desccription = $hotel["description"] ?: 'Este destino no tiene descripcion';
+        $description = $hotel["description"] ?: 'Este destino no tiene descripcion';
         $pool = $hotel["piscina"] ? "piscina.png" : "piscina_no.png";
         echo "
       <div class='card m-2 px-0 reserva' style='width: 21rem;' data-name='$nombre'>
@@ -90,8 +90,8 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
         <div class='card-body'>
           <h5 class='card-title'>$nombre</h5>
           <span class='badge bg-secondary mb-1'>$country - $city</span> <img src='./img/$pool' style='height:20px;'>
-          <p class='card-text description-places'>desccription</p>
-          <button id='reserva-$id' class='btn  main-button'>Reservar</button>
+          <p class='card-text description-places'>$description</p>
+          <button id='reserva-$id' class='btn  main-button' data-description='$description' data-name='$nombre' data-img=$image>Reservar</button>
         </div>
     </div>";
       }
@@ -110,26 +110,14 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/bali3.jpg" class="d-block w-100" alt="...">
+          <img id='imgCarrouselCard' src="img/bali3.jpg" class="d-block w-100" alt="..."
+            onerror="this.src='./img/default-image.jpg'">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Bali Resort </h5>
-            <p>Get the perfect summer in Bali Resort with everything you could ever need</p>
+            <h5 id='nameCarrouselCard'>Bali Resort </h5>
+            <p id='descCarrouselCard'>Get the perfect summer in Bali Resort with everything you could ever need</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="img/bali2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Bali afternoon</h5>
-            <p>Get a a pice of inner peace seeing the sunset in Bali</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/bali1.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
+
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev">
@@ -144,8 +132,9 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
     </div>
     <!--Description-->
     <div class="mt-3 d-flex flex-column align-items-center  justify-content-center px-4">
-      <h2>Bali Resort paradaise</h2>
-      <p>Located in Batununggul, 500 m from Batununggul Rastafara Beach, Cemara Beachfront Nusa Penida provides
+      <h2 id='nameBigCard'>Bali Resort paradaise</h2>
+      <p id='descBigCard'>Located in Batununggul, 500 m from Batununggul Rastafara Beach, Cemara Beachfront Nusa Penida
+        provides
         accommodation with an outdoor swimming pool, free private parking, a garden and a terrace. 1.2 km from Sampalan
         Beach and 1.8 km from Mentigi Beach, the property features a bar and barbecue facilities. The accommodation
         offers karaoke and room service.</p>
@@ -174,7 +163,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
         <!-- Hotel input -->
         <div class="form-outline mb-4">
           <label class="form-label" for="form6Example5">Hotel name</label>
-          <select " id="hotelform" name="hotelform" class="form-control" required>
+          <select " id=" hotelform" name="hotelform" class="form-control" required>
             <?php
             $hotelList = $DBHotels->query("SELECT * FROM hoteles");
             foreach ($hotelList as $hotel) {
