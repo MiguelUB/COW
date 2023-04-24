@@ -62,18 +62,15 @@ function displayInputResults(textInput) {
     }
 }
 function showSuggestion(textInput) {
-
-    // searchSuggestions.innerHTML=textInput
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
+            // Cargar resultados al HTML
             searchSuggestions.innerHTML = this.responseText;
         }
     };
     xmlhttp.open("GET", "listaHoteles.php?q=" + textInput, true);
     xmlhttp.send();
-
     return
 }
 

@@ -91,7 +91,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
           <h5 class='card-title'>$nombre</h5>
           <span class='badge bg-secondary mb-1'>$country - $city</span> <img src='./img/$pool' style='height:20px;'>
           <p class='card-text description-places'>$description</p>
-          <button id='reserva-$id' class='btn  main-button' data-description='$description' data-name='$nombre' data-img=$image>Reservar</button>
+          <button id='reserva-$id' class='btn  main-button' data-description='$description' data-name='$nombre' data-img=$image>Reserve</button>
         </div>
     </div>";
       }
@@ -141,7 +141,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
     </div>
     <!--Formulary-->
     <div class="shadow-1 py-2 px-4">
-      <h2>Formualary for information</h2>
+      <h2>Formualary for reserve</h2>
       <form action="requestInfo.php" method="POST">
         <!-- first and last names input -->
         <div class="row mb-4">
@@ -193,7 +193,7 @@ $hotelList = $DBHotels->query("SELECT * FROM hoteles")
 
 
         <!-- Submit button -->
-        <button type="submit" class="btn  btn-block mb-4 main-button">Ask information</button>
+        <button type="submit" class="btn  btn-block mb-4 main-button">Get Sweet Deal</button>
       </form>
     </div>
     <!--Hotels Grid-->
